@@ -2,3 +2,16 @@
   width: 40px;
   margin-right: 10px;
 }
+
+.thumbnail-product {
+  height: 150px !important;
+  max-width: 150px !important;
+}
+
+.precio-real{
+  text-decoration: line-through;
+}
+
+.precio-oferta{
+  color: darkblue;
+}
