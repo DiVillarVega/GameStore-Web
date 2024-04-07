@@ -69,3 +69,9 @@ if (document.getElementById('menuA')) {
   });
 
 };
+
+//BOTÓN COMPRAR (Lleva a ficha.html)
+const btnComprar = document.getElementById('btnComprar');
+btnComprar.addEventListener('click', () => {
+  window.location.href = 'ficha.html';
+});
