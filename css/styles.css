@@ -1,3 +1,7 @@
+body {  
+  background: linear-gradient(to right, #180f28, #492e75, #130823);
+}
+
 .logo {
   width: 40px;
   margin-right: 10px;
@@ -15,3 +19,71 @@
 .precio-oferta{
   color: darkblue;
 }
+
+.cuadro_login {
+  border: 1px solid rgb(255, 255, 255);
+  padding: 40px;
+  width: 500px;
+  background-color: none;
+  margin: 0 auto;
+  box-shadow:
+  0 0 10px rgb(255, 255, 255),
+  0 0 1cap rgba(0,178,255,1);
+}
+
+.titulos{
+  text-align: center;
+  color: rgb(99, 99, 248);
+}
+
+
+
+.letra{
+  color: rgb(255, 255, 255);
+}
+
+
+
+.cute-font-regular {
+  font-family: "Cute Font", sans-serif;
+  font-weight: 800;
+  font-size:4em;
+  font-optical-sizing: auto;
+  font-style: normal;
+  text-align: center;
+}
+
+.neon {
+	color: #ffffff;
+	text-shadow:
+		0 0 5px rgba(0,178,255,1),
+		0 0 10px rgba(0,178,255,1),
+		0 0 15px rgba(0,178,255,1),
+		0 0 20px rgba(38,104,127,1),
+		0 0 25px rgba(38,104,127,1),
+		0 0 30px rgba(38,104,127,1),
+		0 0 35px rgba(38,104,127,1),
+		0 0 40px rgba(38,104,127,1),
+		0 0 45px rgba(38,104,127,1);
+}
+
+
+.boton_registro{
+  background: linear-gradient(to right, #15103c, #4273ed, #15103c); 
+  border: none; 
+  color: rgb(255, 255, 255) !important; 
+  padding: 10px 20px; 
+  text-align: center; 
+  display: inline-block;  
+}
+
+.boton_registro:hover{
+  background: linear-gradient(to right, #15103c, #4273ed, #15103c); 
+  box-shadow:
+  0 0 5px rgba(0,178,255,1),
+  0 0 10px rgba(0,178,255,1),
+  0 0 15px rgba(0,178,255,1),
+  0 0 20px rgba(38,104,127,1),
+  0 0 25px rgba(38,104,127,1);
+}
+
