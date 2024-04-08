@@ -87,3 +87,23 @@ body {
   0 0 25px rgba(38,104,127,1);
 }
 
+
+
+
+#fotoFicha{
+  width: 200px;
+  max-height: 200px;
+}
+
+.contornoFicha{
+  border: 2px solid black;
+  padding: 10px;
+  margin: 100px;
+}
+
+#spanFicha{
+  display: inline-block;
+  vertical-align: top;
+  font-size: 40px;
+  font-weight: bold;
+}
