@@ -114,3 +114,20 @@ body {
   font-size: 20px;
   font-weight: bold;
 }
+.fw-300{
+  font-weight: 300;
+}
+
+.centrar-texto{
+  text-align: center;
+}
+
+.iconos-nosotros{
+    display: flex;
+    justify-content: space-between;
+}
+
+.iconos{
+    flex-basis: calc(33.3% - 1rem);
+    text-align: center;
+}
