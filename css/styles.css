@@ -131,3 +131,29 @@ body {
     flex-basis: calc(33.3% - 1rem);
     text-align: center;
 }
+
+.containerpen {
+  position: absolute;
+  overflow: hidden;
+  width: 100%; /* Ancho del contenedor */
+  height: 50px; /* Alto del contenedor */
+}
+
+#pinguino {
+  position: absolute;
+  top: 4px;
+  left: -100px;
+  width: 40px; /* Ancho del pingüino */
+  height: auto; /* Altura automática para mantener la proporción */
+  animation: caminar 20s linear infinite;
+}
+
+@keyframes caminar {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    left: calc(100% - 40px); /* Hasta el borde derecho */
+    }
+}
+
