@@ -1,3 +1,8 @@
+/* DESCOMENTAR ESTO PARA "HACK DEL DIV" */
+/* div{
+  border: 1px solid red;
+} */
+
 body {  
   background: linear-gradient(to right, #180f28, #4357ab, #130823);
 }
@@ -157,3 +162,12 @@ body {
     }
 }
 
+#boleta_tabla_estados{
+  float: right;
+}
+
+#boleta_tabla_estados td{
+  padding-right: 30px;
+  text-align: center;
+  font-weight: bold;
+}
