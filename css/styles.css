@@ -1,5 +1,5 @@
 body {  
-  background: linear-gradient(to right, #180f28, #492e75, #130823);
+  background: linear-gradient(to right, #180f28, #4357ab, #130823);
 }
 
 .logo {
@@ -96,7 +96,7 @@ body {
 }
 
 .contornoFicha{
-  border: 2px solid black;
+  border: 2px solid white;
   padding: 10px;
   margin: 100px;
 }
@@ -107,3 +107,53 @@ body {
   font-size: 40px;
   font-weight: bold;
 }
+
+#spanFicha2{
+  display: inline-block;
+  vertical-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+.fw-300{
+  font-weight: 300;
+}
+
+.centrar-texto{
+  text-align: center;
+}
+
+.iconos-nosotros{
+    display: flex;
+    justify-content: space-between;
+}
+
+.iconos{
+    flex-basis: calc(33.3% - 1rem);
+    text-align: center;
+}
+
+.containerpen {
+  position: absolute;
+  overflow: hidden;
+  width: 100%; /* Ancho del contenedor */
+  height: 50px; /* Alto del contenedor */
+}
+
+#pinguino {
+  position: absolute;
+  top: 4px;
+  left: -100px;
+  width: 40px; /* Ancho del pingüino */
+  height: auto; /* Altura automática para mantener la proporción */
+  animation: caminar 20s linear infinite;
+}
+
+@keyframes caminar {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    left: calc(100% - 40px); /* Hasta el borde derecho */
+    }
+}
+
