@@ -1,3 +1,8 @@
+/* DESCOMENTAR ESTO PARA "HACK DEL DIV" */
+/* div{
+  border: 1px solid red;
+} */
+
 body {  
   background: linear-gradient(to right, #180f28, #4357ab, #130823);
 }
@@ -24,8 +29,15 @@ body {
   border: 1px solid rgb(255, 255, 255);
   padding: 40px;
   width: 500px;
+  height: auto;
   background-color: none;
   margin: 0 auto;
+  box-shadow:
+  0 0 10px rgb(255, 255, 255),
+  0 0 1cap rgba(0,178,255,1);
+}
+
+.cuadro_neon {
   box-shadow:
   0 0 10px rgb(255, 255, 255),
   0 0 1cap rgba(0,178,255,1);
@@ -69,22 +81,20 @@ body {
 
 
 .boton_registro{
-  background: linear-gradient(to right, #15103c, #4273ed, #15103c); 
+  background: linear-gradient(to right, #022267,#044ff2, #022267); 
   border: none; 
   color: rgb(255, 255, 255) !important; 
   padding: 10px 20px; 
   text-align: center; 
-  display: inline-block;  
+  display: inline-block;
+  width: 100px;  
 }
 
 .boton_registro:hover{
-  background: linear-gradient(to right, #15103c, #4273ed, #15103c); 
+  background: linear-gradient(to right, #010f2e,#023093, #010f2e); 
   box-shadow:
   0 0 5px rgba(0,178,255,1),
-  0 0 10px rgba(0,178,255,1),
-  0 0 15px rgba(0,178,255,1),
-  0 0 20px rgba(38,104,127,1),
-  0 0 25px rgba(38,104,127,1);
+  0 0 20px rgba(38,104,127,1);
 }
 
 
@@ -156,4 +166,37 @@ body {
     left: calc(100% - 40px); /* Hasta el borde derecho */
     }
 }
+
+#boleta_tabla_estados{
+  float: right;
+}
+
+#boleta_tabla_estados td{
+  padding-right: 30px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.image-container {
+  position: relative;
+  width: 200px; /* Establecer el ancho máximo */
+  height: auto; /* Permitir que la altura se ajuste automáticamente */
+}
+
+.user-image {
+  max-width: 100%;
+  max-height: 200px; /* Establecer el tamaño máximo */
+  width: auto;
+  height: auto;
+}
+
+.file-input {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+
+
 
