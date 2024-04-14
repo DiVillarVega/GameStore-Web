@@ -20,8 +20,98 @@
   </head>
   <body>
     <div id="menuC"></div>
-    <h1>Hello, world!</h1>
+    <br>
+
+    <!-- contenido principal -->
+    <main role="main">
+      <div class="container">
+        <section class="text center">
+          <h1 class="cute-font-regular neon">DATOS CLIENTE/ADMIN</h1>
+          <br>
+          <form class="row g-3 needs-validation" action="" novalidate>
+            <div class="container-fluid">
+              <div class="row">
+              <!-- DATOS -->
+                <div class="col-sm-12 col md-6 col-lg-6">
+
+                  <div class="md-3 fw-bold">
+                    <label for="rut" class="form-label letra">RUT</label>
+                    <input type="text" class="form-control" id="rut" value="21.037.761-1" required>
+                    <div class="invalid-feedback">Debe llenar el campo Rut</div>
+                </div>
+
+                  <div class="md-3 fw-bold">
+                    <label for="nombres" class="form-label letra">Nombres</label>
+                    <input type="text" class="form-control" id="nombres" value="Diego Alfonso" required>
+                    <div class="invalid-feedback">Debe llenar el campo Nombres</div>
+                  </div>
+
+                  <div class="md-3 fw-bold">
+                    <label for="apellidos" class="form-label letra">Apellidos</label>
+                    <input type="text" class="form-control" id="apellidos" value="Villar Vega" required>
+                    <div class="invalid-feedback">Debe llenar el campo Apellidos</div>
+                  </div>
+
+                  <div class="md-3">
+                    <label for="email" class="form-label letra fw-bold">Correo electrónico</label>
+                    <input type="email" class="form-control" id="email" value="di.villar@duocuc.cl" required>
+                    <div class="invalid-feedback">Debe llenar el campo Correo electrónico</div>
+                  </div>                  
+
+                  <div class="md-3 fw-bold">
+                    <label for="direccion" class="form-label letra">Dirección</label>
+                    <textarea class="form-control" id="direccion" rows="3" required>Merced 186</textarea>
+                    <div class="invalid-feedback">Debe llenar el campo Dirección</div>
+                  </div>  
+
+                  <div class="md-3 fw-bold">
+                    <label for="password" class="form-label letra">Nueva contraseña</label>
+                    <input type="password" class="form-control" id="password" placeholder="Minimo de 8 caracteres" required>
+                    <div class="invalid-feedback">Debe llenar el campo Contraseña</div>
+                  </div>
+
+                  <div class="md-3 fw-bold">
+                    <label for="password2" class="form-label letra">Repita nueva contraseña</label>
+                    <input type="password" class="form-control" id="password2" placeholder="Repita la contraseña" required>
+                    <div class="invalid-feedback">Ambas contraseñas deben ser identicas</div>
+                  </div>
+                  <br>
+                  <div class="mb-3 form-check" form check>
+                    <input class="form-check-input" type="checkbox" value="" id="subscripcion">
+                    <label class="form-check-label letra" for="subscripcion">
+                      <strong>
+                        Notificaciones
+                      </strong>
+                    </label>
+                    <div id="subscripcionHelp" class="form-help letra">Autorizo a PenguinPixel a enviarme notificaciones</div>
+                    <div></div>
+                  </div>                  
+
+                  <button type="submit" class="btn btn-primary boton_registro">Registrarse</button>
+                  <button type="reset" class="btn btn-primary boton_registro">Limpiar</button>
+
+                </div>
+                <!-- foto de perfil -->
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                  <br>
+                  <div class="image-container">
+                    <img src="img/DiegoCristo.png" alt="" class="user-image">
+                    <input type="file" class="form-control file-input">
+                  </div>
+                </div>                                                
+                <!-- fin foto perfil -->
+
+              </div>
+            </div>
+
+          </form>
+        </section>
+      </div>
+    </main>
+    <br>
+
+
+    <script src="js/script.js"></script>    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="js/script.js"></script>
   </body>
 </html>
