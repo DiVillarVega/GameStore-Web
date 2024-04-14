@@ -1,7 +1,7 @@
 /* DESCOMENTAR ESTO PARA "HACK DEL DIV" */
 /* div{
   border: 1px solid red;
-} */
+}  */
 
 body {  
   background: linear-gradient(to right, #180f28, #4357ab, #130823);
@@ -196,3 +196,5 @@ body {
   left: 0;
   width: 100%;
 }
+
+
