@@ -48,7 +48,10 @@ body {
   color: rgb(99, 99, 248);
 }
 
-
+.opcion{
+  display: inline-block;
+  margin-right: 10px;
+}
 
 .letra{
   color: rgb(255, 255, 255);
