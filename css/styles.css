@@ -196,3 +196,39 @@ body {
   left: 0;
   width: 100%;
 }
+
+.letra-disponible{
+  color: rgb(0, 255, 0);
+  font-size: 25px;
+  display: inline-block;
+  font-weight: bold;
+}
+
+.precio-real-ficha{
+  color: white;
+  font-size: 40px;
+  display: inline-block;
+  font-weight: bold;
+}
+
+.letra-oferta{
+  color: rgb(230, 255, 0);
+  font-size: 25px;
+  display: inline-block;
+  font-weight: bold;
+}
+
+.precio-real-ficha-oferta{
+  color: white;
+  font-size: 40px;
+  display: inline-block;
+  font-weight: bold;
+  text-decoration: line-through;
+}
+
+.letra-agotado{
+  color: rgb(255, 50, 50);
+  font-size: 25px;
+  display: inline-block;
+  font-weight: bold;
+}
