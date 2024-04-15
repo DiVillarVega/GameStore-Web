@@ -1,7 +1,7 @@
 /* DESCOMENTAR ESTO PARA "HACK DEL DIV" */
 /* div{
   border: 1px solid red;
-} */
+}  */
 
 body {  
   background: linear-gradient(to right, #180f28, #4357ab, #130823);
@@ -140,6 +140,7 @@ body {
 .iconos{
     flex-basis: calc(33.3% - 1rem);
     text-align: center;
+    
 }
 
 .containerpen {
@@ -232,3 +233,22 @@ body {
   display: inline-block;
   font-weight: bold;
 }
+
+.fotos-nosotros {
+  max-width: 200px;
+  max-height: 200px;
+  width: auto;
+  height: auto;
+  
+}
+.card {
+  text-align: center; /* Centrar contenido horizontalmente */
+  max-width: 300px;
+  
+}
+.card-img-top {
+  width: 50%; /* Ajusta el ancho de la imagen según tus necesidades */
+  margin: 0 auto; /* Centra la imagen horizontalmente */
+  display: block; /* Asegura que la imagen se comporte como un bloque */
+}
+
