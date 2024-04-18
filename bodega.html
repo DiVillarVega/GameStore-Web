@@ -36,19 +36,7 @@
           <!-- campos del registro de usuario -->
             <div class="col-sm-12 col-md-6 col-lg-6">
 
-              <div class="md-3 fw-bold">
-                <label for="plataforma" class="form-label letra">Plataforma</label>
-                <div class="dropdown" id="plataforma">
-                  <button class="boton_registro">Selecciona una Plataforma</button>
-                  <div class="dropdown-content">
-                      <a href="#">PS5</a>
-                      <a href="#">PS4</a>
-                      <a href="#">Nintendo Switch</a>
-                      <a href="#">Xbox Series X</a>
-                  </div>
-              </div>
-              <br><br>
-              </div>
+
               <div class="md-3 fw-bold">
                 <label for="categoria" class="form-label letra">Categoría</label>
                 <div class="dropdown" id="categoria">
@@ -64,15 +52,31 @@
               </div>
               </div>              
               <br>
-              <div class="md-6 fw-bold">
+              <div class="md-3 fw-bold">
                 <label for="titulo" class="form-label letra">Titulo</label>
-                <input type="text" class="form-control" id="titulo" placeholder="Escriba el titulo" required>
-                <div class="invalid-feedback">Debe llenar el campo Titulo</div>
+                <div class="dropdown" id="plataforma">
+                  <button class="boton_registro">Selecciona una Plataforma</button>
+                  <div class="dropdown-content">
+                      <a href="#">Bread & Fred</a>
+                      <a href="#">Cyberpunk 2077</a>
+                      <a href="#">Pokemon Escarlata y Pokemon Púrpura</a>
+                      <a href="#">Hi-Fi Rush</a>
+                      <a href="#">God Of War: Ragnarok</a>
+                      <a href="#">Doom: Eternal</a>
+                      <a href="#">Final Fantasy</a>
+                      <a href="#">The Witcher 3: Wild Hunt</a>
+                      <a href="#">Uncharted 4: A Thief's End</a>
+                      <a href="#">Red Dead Redemption 2</a>
+                      <a href="#">FIFA 21</a>
+                      <a href="#">Call of Duty: Modern Warfare</a>
+                  </div>
               </div>
+              <br><br>
+              </div>              
               <br>                 
               <div class="md-6 fw-bold">
                 <label for="cantidad" class="form-label letra">Cantidad</label>
-                <input type="text" class="form-control" id="cantidad" placeholder="Ingrese número" required>
+                <input type="text" class="form-control-md" id="cantidad" placeholder="Ingrese número" required>
                 <div class="invalid-feedback">Debe llenar el campo Cantidad</div>
               </div>
               <br>
@@ -84,8 +88,7 @@
             <div class="col-sm-12 col-md-6 col-lg-4">
               <br>
               <div class="image-container">
-                <img src="img/joystick.jpg" alt="" class="user-image">
-                <input type="file" class="form-control file-input">
+                <img src="img/joystick.jpg" alt="" class="user-image">              
               </div>
             </div>                                                
             <!-- fin foto perfil -->
@@ -96,7 +99,6 @@
           <thead>
             <th scope="col" class="text-center"></th>
             <th scope="col" class="text-center d-none d-lg-block d-lg-table-cell">ID</th>
-            <th scope="col" class="text-center">Plataforma</th>
             <th scope="col" class="text-center">Categoria</th>
             <th scope="col" class="text-center">Titulo</th>
             <th scope="col" class="text-center">Estado</th>
@@ -107,31 +109,35 @@
             <tr>
               <td scope="row" class="text-center"></td>
               <td scope="col" class="text-center d-none d-lg-block d-lg-table-cell">24</td>
-              <td scope="col" class="text-center">PS5</td>
               <td scope="col" class="text-center">Acción</td>
               <td scope="col" class="text-center">Cyberpunk 2077</td>
               <td scope="col" class="text-center">Vendido</td>
-              <td scope="col" class="text-center"><u class="letrazul">Eliminar</u></td>
+              <td scope="col" class="text-center">
+                <button type="button" href="#" class="btn btn-primary btn-sm">Eliminar
+              </td>
             </tr>
             <!-- Segunda linea -->
             <tr>
               <td scope="row" class="text-center">></td>
               <td scope="col" class="text-center d-none d-lg-block d-lg-table-cell">30</td>
-              <td scope="col" class="text-center">Nintendo Switch</td>
               <td scope="col" class="text-center">Rol</td>
               <td scope="col" class="text-center">Pokemon escarlata y Pokemon Purpura</td>
               <td scope="col" class="text-center">En bodega</td>
-              <td scope="col" class="text-center"><u class="letrazul">Eliminar</u></td>
+              <td scope="col" class="text-center">
+                <button type="button" href="#" class="btn btn-primary btn-sm">Eliminar
+                </button>
+              </td>
             </tr>
-            <!-- Tercera linea pa -->
+            <!-- Tercera linea-->
             <tr>
               <td scope="row" class="text-center"></td>
               <td scope="col" class="text-center">18</td>
-              <td scope="col" class="text-center">Xbox Series X</td>
               <td scope="col" class="text-center">Hack and slash</td>
               <td scope="col" class="text-center">Hi-Fi Rush</td>
               <td scope="col" class="text-center">Entregado</td>
-              <td scope="col" class="text-center"><u class="letrazul">Eliminar</u></td>
+              <td scope="col" class="text-center">
+                <button type="button" href="#" class="btn btn-primary btn-sm">Eliminar
+              </td>
             </tr>
           </tbody>
         </table>
