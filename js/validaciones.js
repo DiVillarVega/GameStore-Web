@@ -55,10 +55,10 @@ $(document).ready(function() {
   }, "Sólo se permiten números.");
 
 
-    // El siguiente Javascript obliga a que la caja de texto del rut, siempre escriba la letra "K" en mayúscula
-    document.getElementById('rut').addEventListener('keyup', function(e) {
-      e.target.value = e.target.value.toUpperCase();
-    });
+    // // El siguiente Javascript obliga a que la caja de texto del rut, siempre escriba la letra "K" en mayúscula
+    // document.getElementById('rut').addEventListener('keyup', function(e) {
+    //   e.target.value = e.target.value.toUpperCase();
+    // });
   
 
   // Validar formulario de registro
@@ -142,13 +142,48 @@ $(document).ready(function() {
     }
   );
 
+  // Validar formulario de registro
+  $('#formulario_login').validate(
+    {
+      rules: {
+        correo: {
+          required: true,
+          emailCompleto: true,
+        },
+        contraseña: {
+          required: true,
+          minlength: 8,
+          maxlength: 15,
+        }
+      },
+      messages: {
+        correo: {
+          required: 'El correo es un campo obligatorio',
+          emailCompleto: 'Ingrese un correo válido'
+        },
+        contraseña: {
+          required: 'La contraseña es un campo requerido',
+          minlength: 'La contraseña debe tener un mínimo de 8 caracteres',
+          maxlength: 'La contraseña debe tener un máximo de 15 caracteres', 
+        }
+      }
+    }
+  );
+
   // Validar formulario de productos
   $('#formulario_productos').validate(
     {
       rules: {
+        id: {
+          required: true,
+          minlength: 1,
+          maxlength: 5,
+          soloNumeros: true
+        },
         nombrep: {
           required: true,
-          maxlength: 100
+          minlength: 1,
+          maxlength: 60
         },
         descripcion: {
           required: true,
@@ -158,7 +193,7 @@ $(document).ready(function() {
         precio: {
           required: true,
           minlength: 1,
-          maxlength: 5,
+          maxlength: 7,
           soloNumeros: true
         },
         descuentosub: {
@@ -174,10 +209,17 @@ $(document).ready(function() {
           soloNumeros: true
         }
       },
-      messages: {     
+      messages: {  
+        id: {
+          required: "El ID es un campo requerido",
+          minlength: 'El ID debe tener un mínimo de 1 caracteres',
+          maxlength: 'El ID debe tener un máximo de 7 caracteres',
+          soloNumeros: 'Ingrese solo números'
+        },   
         nombrep: {
           required: 'El nombre es un campo requerido',
-          maxlength: 'El nombre debe tener un máximo de 100 caracteres'
+          minlength: 'El nombre debe tener un minimo de 1 caracter',
+          maxlength: 'El nombre debe tener un máximo de 60 caracteres'
         },
         descripcion: {
           required: 'La descripción es un campo requerido',
@@ -187,8 +229,8 @@ $(document).ready(function() {
         precio: {
           required: 'El precio es un campo requerido',
           minlength: 'El precio debe tener un mínimo de 1 caracteres',
-          maxlength: 'El precio debe tener un máximo de 5 caracteres',
-          soloNumeros: 'Ingrese solo numeros y %'
+          maxlength: 'El precio debe tener un máximo de 7 caracteres',
+          soloNumeros: 'Ingrese solo números'
         },
         descuentosub: {
           required: 'El descuento es un campo requerido',
@@ -205,7 +247,6 @@ $(document).ready(function() {
       }
     }
   );
-
   // Validar formulario de mis datos
   $('#formulario_misdatos').validate(
     {
