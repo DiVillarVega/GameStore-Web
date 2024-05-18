@@ -64,39 +64,68 @@
                       value=""/>                    
                   </div>
 
-                  <div class="md-3 fw-bold">
-                    <label for="apellidos" class="form-label letra">Apellidos</label>
-                    <input required type="text" class="form-control" id="apellidos" placeholder="Escriba ambos apellidos" name="apellidos">
-                    <div class="invalid-feedback">Debe llenar el campo Apellidos</div>
+                  <div class="form-group">
+                    <label for="apellido" class="letra">Apellido</label>
+                    <input
+                    type="text" 
+                    id="apellido" 
+                    name="apellido"
+                    class="form-control" 
+                    placeholder="Escriba su apellido" 
+                    value=""/>                    
                   </div>
 
-                  <div class="md-3">
-                    <label for="correo" class="form-label letra fw-bold">Correo electrónico</label>
-                    <input required type="correo" class="form-control" id="email" placeholder="Ej: penguin@gmail.com" name="correo">
+                  <div class="form-group">
+                    <label for="correo" class="letra fw-bold">Correo electrónico</label>
+                    <input 
+                    type="email" 
+                    class="form-control" 
+                    id="correo" 
+                    placeholder="Ej: penguin@gmail.com" 
+                    name="correo"
+                    value=""/>
                     <div id="emailHelp" class="form-help letra">Nunca compartiremos sus datos</div>
-                    <div class="invalid-feedback">Debe llenar el campo Correo electrónico</div>
                   </div>                  
 
                   <div class="md-3 fw-bold">
-                    <label for="direccion" class="form-label letra">Dirección</label>
-                    <textarea required class="form-control" id="direccion" rows="3" placeholder="Escriba su domicilio" name="direccion" ></textarea>
-                    <div class="invalid-feedback">Debe llenar el campo Dirección</div>
+                    <label for="direccion" class="letra">Dirección</label>
+                    <textarea 
+                    class="form-control" 
+                    id="direccion" 
+                    rows="3" 
+                    placeholder="Escriba su domicilio" 
+                    name="direccion" 
+                    value=""></textarea>
                   </div>  
 
-                  <div class="md-3 fw-bold">
-                    <label for="password" class="form-label letra">Contraseña</label>
-                    <input required type="password" class="form-control" id="password" placeholder="Minimo de 8 caracteres" name="password" >
-                    <div class="invalid-feedback">Debe llenar el campo Contraseña</div>
+                  <div class="form-group">
+                    <label for="password" class="letra">Contraseña</label>
+                    <input 
+                    type="password" 
+                    class="form-control" 
+                    id="password" 
+                    placeholder="Minimo de 8 caracteres" 
+                    name="password" 
+                    value=""/>
                   </div>
 
-                  <div class="md-3 fw-bold">
-                    <label for="password2" class="form-label letra">Repetir contraseña</label>
-                    <input required type="password" class="form-control" id="password2" placeholder="Repetir contraseña" name="password2">
-                    <div class="invalid-feedback">Ambas contraseñas deben ser identicas</div>
+                  <div class="form-control">
+                    <label for="password2" class="letra">Repetir contraseña</label>
+                    <input
+                     type="password" 
+                     class="form-control" 
+                     id="password2" 
+                     placeholder="Repetir contraseña" 
+                     name="password2"
+                     value=""/>
                   </div>
                   <br>
                   <div class="mb-3 form-check" form check>
-                    <input required class="form-check-input" type="checkbox" value="" id="subscripcion">
+                    <input 
+                    class="form-check-input" 
+                    type="checkbox" 
+                    value="" 
+                    id="subscripcion">
                     <label class="form-check-label letra" for="subscripcion">
                       <strong>
                         Subscripción

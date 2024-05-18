@@ -1,4 +1,3 @@
-
 $(document).ready(function() {
 
   // Agregar método de validación para RUT chileno
@@ -48,6 +47,14 @@ $(document).ready(function() {
   }, "Sólo se permiten letras y espacios en blanco.");
 
 
+  // Validar Números con % como descuentos pa
+  $.validator.addMethod("soloNumeros", function(value, element) {
+
+    return this.optional(element) || /^[0-9]+%*$/.test(value);
+
+  }, "Sólo se permiten números.");
+
+
     // El siguiente Javascript obliga a que la caja de texto del rut, siempre escriba la letra "K" en mayúscula
     document.getElementById('rut').addEventListener('keyup', function(e) {
       e.target.value = e.target.value.toUpperCase();
@@ -68,10 +75,10 @@ $(document).ready(function() {
           minlength: 3,
           maxlength: 50
         },
-        apellidos: {
+        apellido: {
           required: true,
           minlength: 5,
-          mxlength: 50
+          maxlength: 50
         },
         correo: {
           required: true,
@@ -80,16 +87,16 @@ $(document).ready(function() {
         direccion: {
           required: true,
           minlength: 10,
-          mxlength: 80
+          maxlength: 80,
         },
         password: {
           required: true,
-          minlength: 5,
+          minlength: 8,
           maxlength: 15,
         },
         password2: {
           required: true,
-          minlength: 5,
+          minlength: 8,
           maxlength: 15,
           equalTo: '#password'
         }
@@ -105,27 +112,95 @@ $(document).ready(function() {
           maxlength: 'El nombre debe tener un máximo de 50 caracteres',
           soloLetras: "El nombre sólo puede contener letras y espacios en blanco",
         },
-        apellidos: {
+        apellido: {
           required: 'El apellido es un campo requerido',
           minlength: 'El apellido debe tener un mínimo de 5 caracteres',
-          mxlength: 'El apellido debe tener un máximo de 50 caracteres'
+          maxlength: 'El apellido debe tener un máximo de 50 caracteres',
+          soloLetras: "El nombre sólo puede contener letras y espacios en blanco",
         },
         correo: {
           required: 'El correo es un campo obligatorio',
-          email: 'Ingrese un correo válido'
+          emailCompleto: 'Ingrese un correo válido'
         },
         direccion: {
           required: 'La dirección es un campo requerido',
           minlength: 'La dirección debe tener un mínimo de 10 caracteres',
-          mxlength: 'La dirección debe tener un máximo de 80 caracteres'
+          maxlength: 'La dirección debe tener un máximo de 80 caracteres'
         },
         password: {
           required: 'La contraseña es un campo requerido',
-          minlength: 'La contraseña debe tener un mínimo de 5 caracteres'
+          minlength: 'La contraseña debe tener un mínimo de 8 caracteres',
+          maxlength: 'La contraseña debe tener un máximo de 15 caracteres', 
         },
         password2: {
           required: 'Repita la contraseña',
+          minlength: 'La contraseña debe tener un mínimo de 8 caracteres',
+          maxlength: 'La contraseña debe tener un máximo de 15 caracteres', 
           equalTo: 'Las contraseñas deben ser iguales'
+        }
+      }
+    }
+  );
+
+  // Validar formulario de productos
+  $('#formulario_productos').validate(
+    {
+      rules: {
+        nombrep: {
+          required: true,
+          maxlength: 100
+        },
+        descripcion: {
+          required: true,
+          minlength: 10,
+          maxlength: 100
+        },
+        precio: {
+          required: true,
+          minlength: 1,
+          maxlength: 5,
+          soloNumeros: true
+        },
+        descuentosub: {
+          required: true,
+          minlength: 1,
+          maxlength: 5,
+          soloNumeros: true
+        },
+        descuentoof: {
+          required: true,
+          minlength: 1,
+          maxlength: 5,
+          soloNumeros: true
+        }
+      },
+      messages: {     
+        nombrep: {
+          required: 'El nombre es un campo requerido',
+          maxlength: 'El nombre debe tener un máximo de 100 caracteres'
+        },
+        descripcion: {
+          required: 'La descripción es un campo requerido',
+          minlength: 'La descripción debe tener un mínimo de 10 caracteres',
+          maxlength: 'La descripción debe tener un máximo de 50 caracteres'
+        },
+        precio: {
+          required: 'El precio es un campo requerido',
+          minlength: 'El precio debe tener un mínimo de 1 caracteres',
+          maxlength: 'El precio debe tener un máximo de 5 caracteres',
+          soloNumeros: 'Ingrese solo numeros y %'
+        },
+        descuentosub: {
+          required: 'El descuento es un campo requerido',
+          minlength: 'El descuento debe tener un mínimo de 1 caracteres',
+          maxlength: 'El descuento debe tener un máximo de 5 caracteres',
+          soloNumeros: 'Ingrese solo numeros y %'
+        },
+        descuentoof: {
+          required: 'El descuento es un campo requerido',
+          minlength: 'El descuento debe tener un mínimo de 1 caracteres',
+          maxlength: 'El descuento debe tener un máximo de 5 caracteres',
+          soloNumeros: 'Ingrese solo numeros y %'
         }
       }
     }

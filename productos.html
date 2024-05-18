@@ -5,9 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Venta de videojuegos">
     <meta name="author" content="Familia Disfuncional">
-    <!--CONEXIÓN CON GOOGLE FORMS-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!--TIPO DE LETRA-->
     <link href="https://fonts.googleapis.com/css2?family=Cute+Font&family=Pixelify+Sans:wght@400..700&family=Tac+One&family=Teko:wght@300..700&display=swap" rel="stylesheet">
     <!--ESTE ES EL ICONO DE LA PÁGINA-->
@@ -15,8 +12,16 @@
 
     <!--ESTE ES EL TÍTULO DE LA PÁGINA-->
     <title>PixelPenguin - Productos</title>
-    <link rel="stylesheet" href="css/styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+      label{
+          font-weight: bolder;
+      }
+      .error{
+          color: red;
+      }
+    </style>
   </head>
   <body>
     <div id="menuA"></div>
@@ -24,22 +29,21 @@
     <!-- Contenido principal -->
     <main role="main">
         <div class="container">
-            <section>
+          <section class="text center">
               <h1 class="cute-font-regular neon">MANTENEDOR DE PRODUCTOS</h1>
               <br>
-              <form action="row g-3 needs-validation">
+              <form method="POST" id="formulario_productos" action="">
                 <div class="container-fluid">
                   <div class="row">
                     <!-- Campos del registro usuario -->
                     <div class="col-sm-12 col-md-10 col-lg-8">
-                      <div class="md-3 fw-bold">
+                      <div class="form-group">
                         <label for="id" class="form-label letra">ID</label>
-                        <input type="text" class="form-control-md" id="id" placeholder=" Ingrese el id de producto" required>
-                        <div class="invalid-feedback">Debe llenar el campo ID</div>
+                        <input type="text" class="form-control-md" id="id" placeholder=" Ingrese el id de producto">
                       </div>
                       <br>
                       
-                      <div class="md-3 fw-bold">
+                      <div class="form-group">
                       <label for="categoria" class="form-label letra">Categoría</label>
                       <div class="dropdown" id="categoria">
                         <button class="boton_registro">Selecciona una categoría</button>
@@ -55,34 +59,56 @@
                     </div>
                     
                       <br>
-                      <div class="md-3 fw-bold">
-                        <label for="nombres" class="form-label letra">Nombre</label>
-                        <input type="text" class="form-control" id="nombres" placeholder="Ingrese nombre de producto." required>
-                        <div class="invalid-feedback">Debe llenar el campo Nombres</div>
+                      <div class="form-group">
+                        <label for="nombrep" class="letra">Nombre</label>
+                        <input
+                        type="text"
+                        class="form-control"
+                        id="nombrep"
+                        name="nombrep"
+                        placeholder="Ingrese nombre de producto."
+                        value=""/>
                       </div>
 
-                      <div class="md-3 fw-bold">
-                        <label for="direc" class="form-label letra">Descripción</label>
-                        <textarea class="form-control" id="direc" rows="3" placeholder="Ingrese descripción de producto." required></textarea>
-                        <div class="invalid-feedback">Debe llenar el campo dirección</div>
+                      <div class="form-group">
+                        <label for="descripcion" class="letra">Descripción</label>
+                        <textarea
+                        class="form-control" 
+                        id="descripcion" 
+                        rows="3" 
+                        placeholder="Ingrese descripción de producto."
+                        value=""></textarea>
                       </div>
 
-                      <div class="md-3 fw-bold">
-                        <label for="correo" class="form-label letra">Precio</label>
-                        <input type="text" class="form-control" id="correo" placeholder="Ingrese precio producto." required>
-                        <div class="invalid-feedback">Debe llenar el campo Correo</div>
+                      <div class="form-group">
+                        <label for="precio" class="letra">Precio</label>
+                        <input
+                        type="text"
+                        class="form-control" 
+                        id="precio" 
+                        name="precio"
+                        placeholder="Ingrese precio producto."
+                        value=""/>
                       </div>
 
-                      <div class="md-3 fw-bold">
-                        <label for="correo" class="form-label letra">Descuento subscriptor</label>
-                        <input type="text" class="form-control" id="correo" placeholder="Ingrese descuento subscriptor." required>
-                        <div class="invalid-feedback">Debe llenar el campo Correo</div>
+                      <div class="form-group">
+                        <label for="descuentosub" class="letra">Descuento subscriptor</label>
+                        <input
+                        type="text"
+                        class="form-control"
+                        id="descuentosub"
+                        placeholder="Ingrese descuento subscriptor."
+                        value=""/>
                       </div>
 
-                      <div class="md-3 fw-bold">
-                        <label for="correo" class="form-label letra">Descuento por oferta</label>
-                        <input type="text" class="form-control" id="correo" placeholder="Ingrese descuento oferta." required>
-                        <div class="invalid-feedback">Debe llenar el campo Correo</div>
+                      <div class="form-group">
+                        <label for="descuentoof" class="letra">Descuento por oferta</label>
+                        <input
+                        type="text"
+                        class="form-control"
+                        id="descuentoof"
+                        placeholder="Ingrese descuento oferta."
+                        value=""/>
                       </div>
 
 
@@ -99,6 +125,7 @@
                         <br><br><br>
                         
                     </div>
+                    <div></div>
                     </div>
                     <!-- foto de perfil -->
                     <div class="col-sm-12 col-md-8 col-lg-4">
@@ -108,6 +135,10 @@
                         <input type="file" class="form-control file-input">
                       </div>
                     </div> 
+
+                     
+                  </div>
+                  <div class="row">
                     <!-- tabla godines -->
                     <table class="table table-hover">
                       <thead>
@@ -158,7 +189,6 @@
                         </tr>
                       </tbody>
                     </table>
-                     
                   </div>
                 </div>
               </form>
@@ -210,5 +240,6 @@
     
     <!-- 4. Mis Scripts (usan el Script de JQuery) -->
     <script src="js/script.js"></script>
+    <script src="js/validaciones.js" type="text/javascript"></script>
   </body>
 </html>
