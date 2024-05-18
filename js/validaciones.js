@@ -142,7 +142,189 @@ $(document).ready(function() {
     }
   );
 
-  // Validar formulario de registro
+
+  // Validar formulario de mis datos
+  $('#formulario_misdatos').validate(
+    {
+      rules: {
+        rut: {
+          required: true,
+          rutChileno: true
+        },
+        nombre: {
+          required: true,
+          soloLetras: true,
+          minlength: 3,
+          maxlength: 50
+        },
+        apellido: {
+          required: true,
+          minlength: 5,
+          maxlength: 50
+        },
+        correo: {
+          required: true,
+          emailCompleto: true,
+        },
+        direccion: {
+          required: true,
+          minlength: 10,
+          maxlength: 80,
+        },
+        password: {
+          required: true,
+          minlength: 8,
+          maxlength: 15,
+        },
+        password2: {
+          required: true,
+          minlength: 8,
+          maxlength: 15,
+          equalTo: '#password'
+        }
+      },
+      messages: {
+        rut: {
+          required: "El RUT es un campo requerido",
+          rutChileno: "El RUT no es válido (escriba sin puntos y con guión)"
+        },        
+        nombre: {
+          required: 'El nombre es un campo requerido',
+          minlength: 'El nombre debe tener un mínimo de 3 caracteres',
+          maxlength: 'El nombre debe tener un máximo de 50 caracteres',
+          soloLetras: "El nombre sólo puede contener letras y espacios en blanco",
+        },
+        apellido: {
+          required: 'El apellido es un campo requerido',
+          minlength: 'El apellido debe tener un mínimo de 5 caracteres',
+          maxlength: 'El apellido debe tener un máximo de 50 caracteres',
+          soloLetras: "El nombre sólo puede contener letras y espacios en blanco",
+        },
+        correo: {
+          required: 'El correo es un campo obligatorio',
+          emailCompleto: 'Ingrese un correo válido'
+        },
+        direccion: {
+          required: 'La dirección es un campo requerido',
+          minlength: 'La dirección debe tener un mínimo de 10 caracteres',
+          maxlength: 'La dirección debe tener un máximo de 80 caracteres'
+        },
+        password: {
+          required: 'La contraseña es un campo requerido',
+          minlength: 'La contraseña debe tener un mínimo de 8 caracteres',
+          maxlength: 'La contraseña debe tener un máximo de 15 caracteres', 
+        },
+        password2: {
+          required: 'Repita la contraseña',
+          minlength: 'La contraseña debe tener un mínimo de 8 caracteres',
+          maxlength: 'La contraseña debe tener un máximo de 15 caracteres', 
+          equalTo: 'Las contraseñas deben ser iguales'
+        }
+      }
+    }
+  );
+
+  // Validar formulario de usuarios
+  $('#formulario_usuarios').validate(
+    {
+      rules: {
+        id: {
+          required: true,
+          soloNumeros: true,
+          minlength: 1,
+          maxlength: 10
+        },
+        rut: {
+          required: true,
+          rutChileno: true
+        },
+        nombre: {
+          required: true,
+          soloLetras: true,
+          minlength: 3,
+          maxlength: 50
+        },
+        apellido: {
+          required: true,
+          minlength: 5,
+          maxlength: 50
+        },
+        correo: {
+          required: true,
+          emailCompleto: true,
+        },
+        direc: {
+          required: true,
+          minlength: 10,
+          maxlength: 80,
+        },
+        password: {
+          required: true,
+          minlength: 8,
+          maxlength: 15,
+        },
+      },
+      messages: {
+        id: {
+          required: "El RUT es un campo requerido",
+          minlength: 'El id debe tener un mínimo de 1 digito',
+          maxlength: 'El id debe tener un máximo de 10 digito',
+          soloNumeros: "El id sólo puede tener numeros",
+        },    
+        rut: {
+          required: "El RUT es un campo requerido",
+          rutChileno: "El RUT no es válido (escriba sin puntos y con guión)"
+        },    
+        nombre: {
+          required: 'El nombre es un campo requerido',
+          minlength: 'El nombre debe tener un mínimo de 3 caracteres',
+          maxlength: 'El nombre debe tener un máximo de 50 caracteres',
+          soloLetras: "El nombre sólo puede contener letras y espacios en blanco",
+        },
+        apellido: {
+          required: 'El apellido es un campo requerido',
+          minlength: 'El apellido debe tener un mínimo de 5 caracteres',
+          maxlength: 'El apellido debe tener un máximo de 50 caracteres',
+          soloLetras: "El nombre sólo puede contener letras y espacios en blanco",
+        },
+        correo: {
+          required: 'El correo es un campo obligatorio',
+          emailCompleto: 'Ingrese un correo válido'
+        },
+        direc: {
+          required: 'La dirección es un campo requerido',
+          minlength: 'La dirección debe tener un mínimo de 10 caracteres',
+          maxlength: 'La dirección debe tener un máximo de 80 caracteres'
+        },
+        password: {
+          required: 'La contraseña es un campo requerido',
+          minlength: 'La contraseña debe tener un mínimo de 8 caracteres',
+          maxlength: 'La contraseña debe tener un máximo de 15 caracteres', 
+        },
+      }
+    }
+  );
+
+  // Validar formulario de bodega
+  $('#formulario_bodega').validate(
+    {
+      rules: {
+        cantidad: {
+          required: true,
+          soloNumeros: true
+        }
+      },
+      messages: {
+        cantidad: {
+          required: "La cantidad es un campo requerido.",
+          soloNumeros: "Ingrese solo números."
+        }
+      }
+    }
+  );
+
+
+  // Validar formulario de login
   $('#formulario_login').validate(
     {
       rules: {
