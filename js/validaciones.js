@@ -309,12 +309,18 @@ $(document).ready(function() {
   $('#formulario_bodega').validate(
     {
       rules: {
+        categoria:{
+          required: true
+        },
         cantidad: {
           required: true,
           soloNumeros: true
         }
       },
       messages: {
+        categoria: {
+          required: "Campo obligatorio"
+        },
         cantidad: {
           required: "La cantidad es un campo requerido.",
           soloNumeros: "Ingrese solo números."
@@ -374,21 +380,20 @@ $(document).ready(function() {
         },
         precio: {
           required: true,
-          minlength: 1,
-          maxlength: 7,
-          soloNumeros: true
+          number: true,
+          min: 0
         },
         descuentosub: {
           required: true,
-          minlength: 1,
-          maxlength: 5,
-          soloNumeros: true
+          number: true,
+          min: 0,
+          max: 100
         },
         descuentoof: {
           required: true,
-          minlength: 1,
-          maxlength: 5,
-          soloNumeros: true
+          number: true,
+          min: 0,
+          max: 100
         }
       },
       messages: {  

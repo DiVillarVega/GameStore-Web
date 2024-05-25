@@ -44,16 +44,18 @@
 
               <div class="md-3 fw-bold">
                 <label for="categoria" class="form-label letra">Categoría</label>
-                <div class="dropdown" id="categoria">
+                <div class="dropdown" id="categoria" name="categoria">
                   <button class="boton_registro">Selecciona una categoría</button>
-                  <div class="dropdown-content">
-                      <a href="#">Acción</a>
-                      <a href="#">Hack and slash</a>
-                      <a href="#">Rol</a>
-                      <a href="#">Simulación</a>
-                      <a href="#">Disparos en primera persona</a>
-                      <a href="#">Defensa de Torres</a>
-                  </div>
+                  <select id="categoria" class="form-control" name="categoria">
+                      <option value="">Seleccione una categoría</option>
+                      <option value="1">Acción</option>
+                      <option value="2">Hack and slash</option>
+                      <option value="3">Rol</option>
+                      <option value="4">Simulación</option>
+                      <option value="5">Disparos en primera persona</option>
+                      <option value="6">Defensa de Torres</option>
+                      
+                  </select>
               </div>
               </div>              
               <br>
@@ -89,8 +91,8 @@
                 placeholder="Ingrese número">
               </div>
               <br>
-              <button type="submit" class="btn btn-primary boton_registro">Nuevo</button>
-              <button type="reset" class="btn btn-primary boton_registro">Agregar</button>
+              <button type="reset" class="btn btn-primary boton_registro">Nuevo</button>
+              <button type="submit" class="btn btn-primary boton_registro">Agregar</button>
 
             </div>
             <!-- foto de perfil -->
