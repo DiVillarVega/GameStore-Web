@@ -55,10 +55,10 @@ $(document).ready(function() {
   }, "Sólo se permiten números.");
 
 
-    // // El siguiente Javascript obliga a que la caja de texto del rut, siempre escriba la letra "K" en mayúscula
-    // document.getElementById('rut').addEventListener('keyup', function(e) {
-    //   e.target.value = e.target.value.toUpperCase();
-    // });
+    // El siguiente Javascript obliga a que la caja de texto del rut, siempre escriba la letra "K" en mayúscula
+     document.getElementById('rut').addEventListener('keyup', function(e) {
+       e.target.value = e.target.value.toUpperCase();
+     });
   
 
   // Validar formulario de registro
