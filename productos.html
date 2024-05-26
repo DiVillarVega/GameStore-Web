@@ -56,15 +56,16 @@
                   <div class="form-group">
                     <label for="categoria" class="form-label letra">Categoría</label>
                     <div class="dropdown" id="categoria">
-                      <button class="boton_registro">Selecciona una categoría</button>
-                      <div class="dropdown-content">
-                          <a href="#">Acción</a>
-                          <a href="#">Hack and slash</a>
-                          <a href="#">Rol</a>
-                          <a href="#">Simulación</a>
-                          <a href="#">Disparos en primera persona</a>
-                          <a href="#">Defensa de Torres</a>
-                      </div>
+                      <select id="categoria" class="form-control" name="categoria">
+                        <option value="">Seleccione una categoría</option>
+                        <option value="1">Acción</option>
+                        <option value="2">Hack and slash</option>
+                        <option value="3">Rol</option>
+                        <option value="4">Simulación</option>
+                        <option value="5">Disparos en primera persona</option>
+                        <option value="6">Defensa de Torres</option>
+                        
+                    </select>
                     </div>
                   </div>
                   <br>
@@ -160,6 +161,7 @@
                     <th scope="col" class="text-center">Precio</th>
                     <th scope="col" class="text-center">%Desc Subscriptor</th>
                     <th scope="col" class="text-center">%Desc Oferta</th>
+                    <th scope="col" class="text-center">Imagen</th>
                   </thead>
                   <tbody>
                     <!-- Primera linea -->
@@ -172,6 +174,7 @@
                       <td scope="col" class="text-center">$50.000</td>
                       <td scope="col" class="text-center">5%</td>
                       <td scope="col" class="text-center">10%</td>
+                      <td><img src="img/hifi.png" alt="Hi-fi Rush" width="50px"></td>
                     </tr>
                     <!-- Segunda linea -->
                     <tr>
@@ -183,6 +186,7 @@
                       <td scope="col" class="text-center">$65.000</td>
                       <td scope="col" class="text-center">5%</td>
                       <td scope="col" class="text-center">30%</td>
+                      <td><img src="img/god_of_war.jpg" alt="Hi-fi Rush" width="50px"></td>
                       
                     </tr>
                     <!-- Tercera linea -->
@@ -195,6 +199,7 @@
                       <td scope="col" class="text-center">$34.990</td>
                       <td scope="col" class="text-center">5%</td>
                       <td scope="col" class="text-center">0%</td>
+                      <td><img src="img/minecraft.jpg" alt="Hi-fi Rush" width="50px"></td>
                       
                     </tr>
                   </tbody>
@@ -251,7 +256,7 @@
     
     <!-- 4. Mis Scripts (usan el Script de JQuery) -->
     <script src="js/script.js"></script>
-    <script src="js/validaciones.js" type="text/javascript"></script>
+    <script src="js/validacion_productos.js" type="text/javascript"></script>
   </body>
 </html>
 

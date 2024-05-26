@@ -38,14 +38,12 @@
       <form method="POST" id="formulario_bodega" action="">
         <div class="container-fluid">
           <div class="row">
-          <!-- campos del registro de usuario -->
+          <!-- campos mantenedor bodega -->
             <div class="col-sm-12 col-md-6 col-lg-6">
-
-
+              <!-- Categoría -->
               <div class="md-3 fw-bold">
                 <label for="categoria" class="form-label letra">Categoría</label>
                 <div class="dropdown" id="categoria" name="categoria">
-                  <button class="boton_registro">Selecciona una categoría</button>
                   <select id="categoria" class="form-control" name="categoria">
                       <option value="">Seleccione una categoría</option>
                       <option value="1">Acción</option>
@@ -56,44 +54,48 @@
                       <option value="6">Defensa de Torres</option>
                       
                   </select>
-              </div>
+                </div>
               </div>              
               <br>
+              <!-- Título -->
               <div class="md-3 fw-bold">
                 <label for="titulo" class="form-label letra">Título</label>
-                <div class="dropdown" id="plataforma">
-                  <button class="boton_registro">Selecciona un título</button>
-                  <div class="dropdown-content">
-                      <a href="#">Bread & Fred</a>
-                      <a href="#">Cyberpunk 2077</a>
-                      <a href="#">Pokemon Escarlata y Pokemon Púrpura</a>
-                      <a href="#">Hi-Fi Rush</a>
-                      <a href="#">God Of War: Ragnarok</a>
-                      <a href="#">Doom: Eternal</a>
-                      <a href="#">Final Fantasy</a>
-                      <a href="#">The Witcher 3: Wild Hunt</a>
-                      <a href="#">Uncharted 4: A Thief's End</a>
-                      <a href="#">Red Dead Redemption 2</a>
-                      <a href="#">FIFA 21</a>
-                      <a href="#">Call of Duty: Modern Warfare</a>
-                  </div>
-              </div>
-              <br><br>
-              </div>              
-              <br>                 
-              <div class="form-group">
-                <label for="cantidad" class="letra">Cantidad</label>
-                <input
-                type="text"
-                class="form-control-md"
-                id="cantidad"
-                name="cantidad" 
-                placeholder="Ingrese número">
+                <div class="dropdown" id="titulo">
+                  <select id="titulo" class="form-control" name="titulo">
+                    <option value="">Seleccione un título</option>
+                    <option value="1">Bread & Fred</option>
+                    <option value="2">Cyberpunk 2077</option>
+                    <option value="3">Pokemon Escarlata y Pokemon Púrpura</option>
+                    <option value="4">Hi-Fi Rush</option>
+                    <option value="5">God Of War: Ragnarok</option>
+                    <option value="6">Doom: Eternal</option>
+                    <option value="7">Final Fantasy</option>
+                    <option value="8">The Witcher 3: Wild Hunt</option>
+                    <option value="9">Uncharted 4: A Thief's End</option>
+                    <option value="10">Red Dead Redemption 2</option>
+                    <option value="11">FIFA 21</option>
+                    <option value="12">Call of Duty: Modern Warfare</option>
+                  </select>
+                </div>
               </div>
               <br>
-              <button type="reset" class="btn btn-primary boton_registro">Nuevo</button>
-              <button type="submit" class="btn btn-primary boton_registro">Agregar</button>
 
+              <!-- Cantidad -->           
+              <div class="md-3 fw-bold">
+                <div class="form-group">
+                  <label for="cantidad" class="form-label letra">Cantidad</label>
+                  <input
+                    type="number"
+                    class="form-control-md"
+                    id="cantidad"
+                    name="cantidad" 
+                    placeholder="Ingrese número">
+                </div>
+              </div>
+              <br>
+              <!-- Botones -->
+              <button type="submit" class="btn btn-primary boton_registro">Agregar</button>
+              <button type="reset" class="btn btn-primary boton_registro">Nuevo</button>
             </div>
             <!-- foto de perfil -->
             <div class="col-sm-12 col-md-6 col-lg-4">
@@ -103,8 +105,8 @@
               </div>
             </div>                                                
             <!-- fin foto perfil -->
-
           </div>
+          <br>
         </div>
         <table class="table table-hover">
           <thead>
@@ -129,7 +131,7 @@
             </tr>
             <!-- Segunda linea -->
             <tr>
-              <td scope="row" class="text-center">></td>
+              <td scope="row" class="text-center"></td>
               <td scope="col" class="text-center d-none d-lg-block d-lg-table-cell">30</td>
               <td scope="col" class="text-center">Rol</td>
               <td scope="col" class="text-center">Pokemon escarlata y Pokemon Purpura</td>
@@ -202,6 +204,6 @@
     
     <!-- 4. Mis Scripts (usan el Script de JQuery) -->
     <script src="js/script.js"></script>
-    <script src="js/validaciones.js" type="text/javascript"></script>
+    <script src="js/validacion_bodega.js" type="text/javascript"></script>
   </body>
 </html>
