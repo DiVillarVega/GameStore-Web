@@ -18,6 +18,7 @@ $(document).ready(function() {
         correo: {
           required: true,
           emailCompleto: true,
+          email: true
         },
         password: {
           required: true,
@@ -28,7 +29,8 @@ $(document).ready(function() {
       messages: {
         correo: {
           required: 'El correo es un campo obligatorio',
-          emailCompleto: 'Ingrese un correo válido'
+          emailCompleto: 'Ingrese un correo válido',
+          email: 'Ingrese un correo válido'
         },
         password: {
           required: 'La contraseña es un campo requerido',

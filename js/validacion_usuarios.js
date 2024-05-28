@@ -68,9 +68,6 @@ $(document).ready(function() {
           required: true,
           min: 1
         },
-        tipo_usuario: {
-          required: true
-        },
         rut: {
           required: true,
           rutChileno: true
@@ -90,6 +87,7 @@ $(document).ready(function() {
         correo: {
           required: true,
           emailCompleto: true,
+          email: true
         },
         direc: {
           required: true,
@@ -101,9 +99,6 @@ $(document).ready(function() {
         id: {
           required: "El ID es un campo requerido",
           min: "El ID debe ser mayor a 0"
-        },
-        tipo_usuario: {
-          required: "El tipo de usuario es un campo requerido"
         },
         rut: {
           required: "El RUT es un campo requerido",
@@ -123,7 +118,8 @@ $(document).ready(function() {
         },
         correo: {
           required: 'El correo es un campo obligatorio',
-          emailCompleto: 'Ingrese un correo válido'
+          emailCompleto: 'Ingrese un correo válido',
+          email: 'Ingrese un correo válido'
         },
         direc: {
           required: 'La dirección es un campo requerido',

@@ -75,6 +75,7 @@ $(document).ready(function() {
         correo: {
           required: true,
           emailCompleto: true,
+          email: true
         },
         direccion: {
           required: true,
@@ -112,7 +113,8 @@ $(document).ready(function() {
         },
         correo: {
           required: 'El correo es un campo obligatorio',
-          emailCompleto: 'Ingrese un correo válido'
+          emailCompleto: 'Ingrese un correo válido',
+          email: 'Ingrese un correo válido'
         },
         direccion: {
           required: 'La dirección es un campo requerido',
